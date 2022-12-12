@@ -1,1 +1,1 @@
-@include('tmp/main')
+@extends('tmp/main')

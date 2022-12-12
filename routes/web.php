@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\pageController;
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\adminPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,17 @@ use App\Http\Controllers\pageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(['domain' => 'xmanage.localhost'], function () {
+    Route::get('/', [adminPageController::class, 'Index']);
+    Route::get('/cars', [adminPageController::class, 'Car'])->name('xmCars');
+    Route::get('/brands', [adminPageController::class, 'Brand'])->name('xmBrands');
+    Route::get('/categories', [adminPageController::class, 'Category']);
+    Route::get('/coba', [adminPageController::class, 'Coba']);
+    Route::POST('/car/in', [adminController::class, 'CarIn'])->name('carIn');
+    Route::POST('/brand/in', [adminController::class, 'BrandIn'])->name('brandIn');
+    Route::POST('/category/in', [adminController::class, 'CategoryIn'])->name('categoryIn');
+});
 
 Route::get('/', [pageController::class, 'HomePage']);
 
