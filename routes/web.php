@@ -32,6 +32,7 @@ Route::group(['domain' => 'xmanage.localhost'], function () {
     });
 });
 
+Route::group(['domain' => 'localhost'], function () {
     Route::get('/', [pageController::class, 'HomePage']);
 
     Route::get('/car', [pageController::class, 'Car']);
@@ -51,3 +52,4 @@ Route::group(['domain' => 'xmanage.localhost'], function () {
     Route::get('/test', [pageController::class, 'Test']);
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});

@@ -2425,7 +2425,8 @@
                                         <a href="brand">BRANDS</a>
                                         <ul class="sub-menu">
                                             @php
-                                                $brand = \App\Models\Brand::all();
+                                                use App\Models\brand;
+                                                $brand = Brand::all();
                                             @endphp
                                             @foreach ($brand as $res=>$v )
                                                 <li id="menu-item-{{ $v->id }}"
