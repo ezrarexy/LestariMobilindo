@@ -1,4 +1,4 @@
-@extends('tmp\main')
+@extends('tmp.main')
 
 @section('title', '404 - Page Not Found')
 

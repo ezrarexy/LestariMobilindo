@@ -1,1 +1,1 @@
-@extends('tmp/main')
+@extends('tmp.main')

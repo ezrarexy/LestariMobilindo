@@ -1,4 +1,4 @@
-@extends('tmp\main')
+@extends('tmp.main')
 
 @section('title', 'About')
 

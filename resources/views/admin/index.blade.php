@@ -1,1 +1,1 @@
-@include('admin/layout/thf')
+@include('admin.layout.thf')

@@ -1,4 +1,4 @@
-@extends('admin/layout/thf')
+@extends('admin.layout.thf')
 
 @section('stylesheet')
     <!-- Custom styles for this page -->
