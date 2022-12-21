@@ -2384,18 +2384,12 @@
                                 <rs-module-wrap id="rev_slider_4_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
                                     <rs-module id="rev_slider_4_1" style="" data-version="6.5.14">
                                         <rs-slides>
-                                            <rs-slide style="position: absolute;" data-key="rs-31" data-title="Slide" data-in="o:0;" data-out="a:false;">
-                                                <img src="/assets/plugins/revslider/public//assets//assets/dummy.png" alt="" title="Titles" width="2376" height="1584" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="/assets/uploads/banner/2.jpg" data-bg="p:center bottom;" data-no-retina>
-
-                                                <rs-layer id="slider-4-slide-11-layer-0" data-type="shape" data-rsp_ch="on" data-xy="x:-2452px;y:-240px;" data-text="w:normal;" data-dim="w:6026px;h:1271.97px;" data-frame_999="o:0;st:w;" style="z-index:5;background-color:rgba(0,0,0,0.5);">
-                                                </rs-layer>
-
-                                            </rs-slide>
-                                            <rs-slide style="position: absolute;" data-key="rs-30" data-title="Slide" data-in="o:0;" data-out="a:false;">
-                                                <img src="/assets/plugins/revslider/public//assets//assets/dummy.png" alt="" title="RANS-Cilegon-FC-Bukber-70-1-1" width="750" height="500" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="/assets/uploads/banner/1.jpg" data-no-retina>
-                                                <rs-layer id="slider-4-slide-29-layer-4" data-type="shape" data-rsp_ch="on" data-xy="x:-2500px;y:-24px;" data-text="w:normal;" data-dim="w:6236px;h:1195px;" data-frame_999="o:0;st:w;" style="z-index:5;background-color:rgba(0,0,0,0.5);">
-                                                </rs-layer>
-                                            </rs-slide>
+                                            @foreach ($data->banner as $k => $v)
+                                                <rs-slide style="position: absolute;" data-key="rs-{{ $k }}" data-title="Slide" data-in="o:0;" data-out="a:false;">
+                                                    <img src="/assets/plugins/revslider/public//assets//assets/dummy.png" alt="" title="" width="2376" height="1584" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="/assets/uploads/banner/{{ $v->img }}" data-bg="p:center bottom;" data-no-retina>
+                                                    <rs-layer id="slider-4-slide-11-layer-0" data-type="shape" data-rsp_ch="on" data-xy="x:-2452px;y:-240px;" data-text="w:normal;" data-dim="w:6026px;h:1271.97px;" data-frame_999="o:0;st:w;" style="z-index:5;background-color:rgba(0,0,0,0.5);"></rs-layer>
+                                                </rs-slide>
+                                            @endforeach
                                         </rs-slides>
                                     </rs-module>
                                     <script>
@@ -2501,11 +2495,11 @@
                             <div class="wpb_wrapper">
                                 <div class="carousel-container">
                                     <ul class="et-product et-main-products products row et-product-style1 hover-animation-zoom-jump products-by-category et-no-variations carousel et-product-slider slick slick-arrows-outside slick-controls-gray slick-dots-centered slick-dots-active-small" data-columns="5" data-mobile-columns="2" data-slides-to-scroll="5" data-navigation="true" data-pagination="">
-                                        @for($i=0; $i<10; $i++)
+                                        @foreach($data->car->new as $i => $v)
                                         <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish first outofstock product_cat-new-cars has-post-thumbnail shipping-taxable purchasable product-type-simple">
                                             <div class="product-inner animation fade">
                                                 <figure class="product_thumbnail ">
-                                                    <a href="product/{{ $i }}" title="New Cars {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" data-src="/img/products/new.jpg" data-sizes="auto" /></a>
+                                                    <a href="product/{{ $v->id }}" title="New Cars {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" data-src="/img/products/{{ $v->img[0] }}" data-sizes="auto" /></a>
                                                     <div class="actions-wrapper">
                                                         <div class="actions-inner">
                                                         </div>
@@ -2514,13 +2508,13 @@
                                                 <div class="caption">
                                                     
                                                     <div class="product-title">
-                                                        <h2><a class="product-link" href="#" title="New Cars Title">New Cars Title {{ $i }}</a></h2>
+                                                        <h2><a class="product-link" href="#" title="New Cars Title">{{ $v->name }}</a></h2>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </li>
-                                        @endfor
+                                        @endforeach
                                     </ul>
                                 </div>                      
                                 <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>

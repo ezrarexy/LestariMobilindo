@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\pageController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\adminPageController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,11 @@ use App\Http\Controllers\adminPageController;
 |
 */
 
-Auth::routes();
+
 
 Route::group(['domain' => 'xmanage.localhost'], function () {
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [LoginController::class, 'login']);
     Route::group(['middleware' => ['web', 'auth']], function () {
         Route::get('/', [adminPageController::class, 'Index']);
         Route::get('/cars', [adminPageController::class, 'Car'])->name('xmCars');

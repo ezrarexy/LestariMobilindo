@@ -32,6 +32,7 @@
     <link rel="alternate" type="application/rss+xml" title="Lestari Mobilindo &raquo; Comments Feed"
         href="comments/feed/index.html" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel='stylesheet' id='berocket_product_brand_style-css' href='/assets/plugins/brands-for-woocommerce/css/frontendc08c.css?ver=3.7.0.2' media='all' />
     <link rel='stylesheet' id='wp-block-library-css' href='/assets/css/dist/block-library/style.min6a4d.css?ver=6.1.1' media='all' />
     <style id='wp-block-library-theme-inline-css'>
@@ -2401,28 +2402,28 @@
                                 <ul id="menu-new-menu" class="primary-menu et-header-menu">
                                     <li id="menu-item-4455"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('/') ? 'current-menu-item current_page_item' : ''}} menu-item-home menu-item-4455">
-                                        <a href="/" aria-current="page">HOME</a></li>
+                                        <a href="/" aria-current="page">BERANDA</a></li>
                                     <li id="menu-item-5864"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('car') ? 'current-menu-item current_page_item' : ''}} menu-item-has-children menu-item-5864 menu-item-mega-parent menu-item-mega-column-5">
-                                        <a href="#">CARS</a>
+                                        <a href="#">MOBIL</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-5286"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5286  mega-menu-title">
-                                                <a href="/car">ALL CARS</a></li>
+                                                <a href="/car">SEMUA</a></li>
                                             <li id="menu-item-5514"
                                                 class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5514 ">
-                                                <a href="/car/new">NEW CARS</a></li>
+                                                <a href="/car/new">BARU</a></li>
                                             <li id="menu-item-5515"
                                                 class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5515 ">
-                                                <a href="/car/used">USED-CARS</a></li>
+                                                <a href="/car/used">BEKAS</a></li>
                                             <li id="menu-item-5672"
                                                 class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5672 ">
-                                                <a href="/car/indent">INDENT CARS</a></li>
+                                                <a href="/car/indent">PESAN</a></li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-5480"
                                         class="menu-item menu-item-type-post_type menu-item-object-page {{ Request::is('brand') ? 'current-menu-item current_page_item' : ''}} menu-item-has-children menu-item-5480 menu-item-mega-parent menu-item-mega-column-5">
-                                        <a href="brand">BRANDS</a>
+                                        <a href="#">MERK</a>
                                         <ul class="sub-menu">
                                             @php
                                                 use App\Models\brand;
@@ -2431,7 +2432,7 @@
                                             @foreach ($brand as $res=>$v )
                                                 <li id="menu-item-{{ $v->id }}"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-{{ $v->id }} ">
-                                                <a href="car/{{ $v->id }}"><span class="item-thumb"><img
+                                                <a href="/brand/{{ $v->id }}"><span class="item-thumb"><img
                                                             width="100" height="100"
                                                             src="/img/brand/{{ $v->logo }}"
                                                             class="attachment-medium_large size-medium_large et-lazyload lazyload"
@@ -2445,10 +2446,10 @@
                                     </li>
                                     <li id="menu-item-4459"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('contact') ? 'current-menu-item current_page_item' : ''}} menu-item-4459">
-                                        <a href="/contact">CONTACT</a></li>
+                                        <a href="/contact">HUBUNGI</a></li>
                                     <li id="menu-item-4458"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('about') ? 'current-menu-item current_page_item' : ''}} menu-item-4458">
-                                        <a href="/about">ABOUT US</a></li>
+                                        <a href="/about">TENTANG</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -2587,25 +2588,25 @@
 
                 <i class="wp-bottom-menu-item-icons fa fa-home"></i>
             </div>
-            <span>HOME</span>
+            <span>Beranda</span>
 
         </a>
-        <a href="car" class="wp-bottom-menu-item {{ Request::is('car') ? 'active' : ''}}">
+        <a href="/car" class="wp-bottom-menu-item {{ Request::is('car') ? 'active' : ''}}">
 
             <div class="wp-bottom-menu-icon-wrapper">
 
                 <i class="wp-bottom-menu-item-icons fa fa-car"></i>
             </div>
-            <span>CARS</span>
+            <span>Mobil</span>
 
         </a>
-        <a href="brand" class="wp-bottom-menu-item {{ Request::is('brand') ? 'active' : ''}}">
+        <a href="/contact" class="wp-bottom-menu-item {{ Request::is('brand') ? 'active' : ''}}">
 
             <div class="wp-bottom-menu-icon-wrapper">
 
-                <i class="wp-bottom-menu-item-icons fa fa-globe"></i>
+                <i class="fal fa-id-badge"></i>
             </div>
-            <span>BRANDS</span>
+            <span>HUBUNGI</span>
 
         </a>
 
@@ -2664,36 +2665,36 @@
                     <ul id="menu-new-menu-1" class="mobile-menu small-menu menu-sliding">
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4455">
-                            <a href="/" aria-current="page">HOME</a><span class="et-menu-toggle"></span>
+                            <a href="/" aria-current="page">BERANDA</a><span class="et-menu-toggle"></span>
                         </li>
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5864 menu-item-mega-parent menu-item-mega-column-5">
-                            <a href="car">CARS</a><span class="et-menu-toggle"></span>
+                            <a href="car">MOBIL</a><span class="et-menu-toggle"></span>
                             <ul class="sub-menu">
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5286  mega-menu-title">
-                                    <a href="car">ALL CARS</a><span class="et-menu-toggle"></span></li>
+                                    <a href="car">SEMUA</a><span class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5514 ">
-                                    <a href="car/new">NEW CARS</a><span
+                                    <a href="car/new">BARU</a><span
                                         class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5515 ">
-                                    <a href="car/used">USED-CARS</a><span
+                                    <a href="car/used">BEKAS</a><span
                                         class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5672 ">
-                                    <a href="car/indent">INDENT CARS</a><span
+                                    <a href="car/indent">PESAN</a><span
                                         class="et-menu-toggle"></span></li>
                             </ul>
                         </li>
                         <li
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5480 menu-item-mega-parent menu-item-mega-column-5">
-                            <a href="tesla/index.html">BRANDS</a><span class="et-menu-toggle"></span>
+                            <a href="#">MERK</a><span class="et-menu-toggle"></span>
                             <ul class="sub-menu">
                                 @foreach ($brand as $res=>$val)
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-{{ $val->id }} "><a
-                                            href="tesla-model-s-rev/index.html"><span class="item-thumb"><img
+                                            href="/brand/{{ $val->id }}"><span class="item-thumb"><img
                                                     width="768" height="339"
                                                     src="/img/brand/{{ $val->logo }}"
                                                     class="attachment-medium_large size-medium_large et-lazyload lazyload"
@@ -2709,9 +2710,9 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4459"><a
-                                href="contact/index.html">CONTACT</a><span class="et-menu-toggle"></span></li>
+                                href="/contact">HUBUNGI</a><span class="et-menu-toggle"></span></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4458"><a
-                                href="about-us/index.html">ABOUT US</a><span class="et-menu-toggle"></span></li>
+                                href="/about">TENTANG</a><span class="et-menu-toggle"></span></li>
                     </ul>
                 </div>
                 <div class="bottom-extras">
@@ -2724,6 +2725,7 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script type="text/html" id="wpb-modifications"></script>
 
         

@@ -245,18 +245,15 @@
               <div class="summary entry-summary">
                 <div id="woo-notices-wrapper"></div>
                 <nav class="woocommerce-breadcrumb">
-                  <a href="index.html">Home</a> <i>/</i>
-                  <a href="product-category/new-cars/index.html"
-                    >NEW CARS</a
-                  >
-                  <i>/</i> {{ $product->name }}
+                  <a href="/">BERANDA</a> <a><i class="fal fa-angle-right text-white"></i></a>
+                  <a href="/car/{{ $product->link }}"><span style="text-transform: uppercase">{{ $product->condition }}</span></a>
                 </nav>
                 <div class="et-pro-summary-top">
                   <h1 class="product_title entry-title">
                     {{ $product->name }}
                   </h1>
                   <p class="price">
-                    <span class="woocommerce-Price-amount amount" ><bdi ><span class="woocommerce-Price-currencySymbol" >Rp</span>{{ $product->price }}</bdi></span>
+                    <span class="woocommerce-Price-amount amount" ><bdi ><span class="woocommerce-Price-currencySymbol" >Rp</span><span class="harga">{{ $product->price }}</span></bdi></span>
                   </p>
                   <div class="clearfix price-separator"></div>
                 </div>
@@ -264,14 +261,9 @@
 
                   <div class="clearfix sticky-bar-trigger"></div>
                   <div class="product_meta">
-                    <span class="posted_in"
-                      >Category:
-                      <a
-                        href="product-category/new-cars/index.html"
-                        rel="tag"
-                        >NEW CARS</a
-                      ></span
-                    >
+                    <span class="posted_in">
+                      Tag: <a href="/category" rel="tag" style="text-transform: uppercase">{{ $product->brand }}</a>, <a href="/tag/{{ $product->category }}" rel="tag" style="text-transform: uppercase">{{ $product->category }}</a>, <a href="/car/{{ $product->condition }}" rel="tag" style="text-transform: uppercase">{{ $product->condition }}</a>
+                    </span>
                   </div>
 
                   <div class="post-share">
@@ -308,7 +300,7 @@
                   aria-controls="tab-description"
                 >
                   <a href="#tab-description" class="tab-link">
-                    Description
+                    Spesifikasi
                   </a>
                 </li>
               </ul>
@@ -324,490 +316,17 @@
           <div class="container">
             <div class="row justify-content-md-center">
               <div class="col-12">
-                <h2>Description</h2>
+                <h2>Spesifikasi</h2>
                 <div class="desc-layout-boxed">
                   {!! $product->spec !!}
                   
-                  <p>Price : {{ $product->price }} OFF THE ROAD</p>
+                  <p>Price : Rp<span class="harga">{{ $product->price }}</span> OFF THE ROAD</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {{-- <section class="related products">
-        <div class="container">
-          <h2>Related products</h2>
-
-          <ul
-            class="products row et-main-products hover-animation-zoom-jump show-rating"
-            data-columns="4"
-            data-mobile-columns="2"
-            data-navigation="true"
-            data-pagination="true"
-            data-layoutmode="packery"
-          >
-            <li
-              class="item et-listing-style1 col-6 col-sm-6 col-md-4 col-lg-3 small_grid_5 product type-product post-7161 status-publish first instock product_cat-new-cars has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner animation fade">
-                <figure class="product_thumbnail">
-                  <a
-                    href="../tesla-model-3-standard-range-plus-facelift-pearl-white-multi-coat/index.html"
-                    title="Tesla Model 3 Standard Range Plus Facelift Pearl White Multi Coat"
-                    ><img
-                      width="2560"
-                      height="2560"
-                      src="/wp-content/uploads/2022/04/thumbnail-website-tesla-model-3-scaled.jpg"
-                      class="main-image skip-lazy wp-post-image"
-                      alt=""
-                      decoding="async"
-                  /></a>
-                  <div class="actions-wrapper">
-                    <div class="actions-inner"></div>
-                  </div>
-                </figure>
-                <div class="caption">
-                  <div class="product-title">
-                    <h2>
-                      <a
-                        class="product-link"
-                        href="../tesla-model-3-standard-range-plus-facelift-pearl-white-multi-coat/index.html"
-                        title="Tesla Model 3 Standard Range Plus Facelift Pearl White Multi Coat"
-                        >Tesla Model 3 Standard Range Plus Facelift Pearl
-                        White Multi Coat</a
-                      >
-                    </h2>
-
-                    <div
-                      class="yith-wcwl-add-to-wishlist add-to-wishlist-7161 wishlist-fragment on-first-load"
-                      data-fragment-ref="7161"
-                      data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":7161,"parent_product_id":7161,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"shortcode","item":"add_to_wishlist"}'
-                    >
-                      <!-- ADD TO WISHLIST -->
-                      <div class="yith-wcwl-add-button et-tooltip">
-                        <a
-                          href="index3d66.html?add_to_wishlist=7161"
-                          rel="nofollow"
-                          data-product-id="7161"
-                          data-product-type="simple"
-                          data-original-product-id="7161"
-                          class="add_to_wishlist single_add_to_wishlist"
-                          data-title="Add to wishlist"
-                          ><span class="text">Add to wishlist</span
-                          ><span class="icon"
-                            ><span class="et-icon et-heart"></span
-                          ></span>
-                        </a>
-                      </div>
-                      <!-- COUNT TEXT -->
-                    </div>
-                  </div>
-
-                  <div class="product_after_title">
-                    <div class="product_after_shop_loop_price">
-                      <span class="price"
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span
-                              class="woocommerce-Price-currencySymbol"
-                              >Rp</span
-                            >1,500,000,000.00</bdi
-                          ></span
-                        ></span
-                      >
-                    </div>
-
-                    <div class="product-excerpt">
-                      <p>
-                        IDR 1,500,000,000.00<br />
-                        Brand New 2022 Tesla Model 3 Standard Range Plus
-                        Facelift Pearl White Multi Coat on Black
-                      </p>
-                      <p>PRICE : Rp 1,5 M On The Road Jakarta</p>
-                      <p>
-                        *Open Pre-Order for The Brand New 2022 Tesla Model
-                        3 Facelift!* Booking fee only IDR 100 jt! Get
-                        yours now!
-                      </p>
-                      <p>
-                        Tersedia juga dalam pilihan warna eksterior :
-                        Solid Black, Deep Blue Metallic, Midnight Silver
-                        Metallic, &amp; Red Multi Coat
-                      </p>
-                    </div>
-
-                    <div class="after_shop_loop_actions">
-                      <a
-                        href="index169e.html?add-to-cart=7161"
-                        data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                        data-product_id="7161"
-                        data-product_sku=""
-                        aria-label="Add &ldquo;Tesla Model 3 Standard Range Plus Facelift Pearl White Multi Coat&rdquo; to your cart"
-                        rel="nofollow"
-                        ><span class="text">Add to cart</span
-                        ><span class="icon"
-                          ><span
-                            class="et-icon et-shopping-cart"
-                          ></span></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="item et-listing-style1 col-6 col-sm-6 col-md-4 col-lg-3 small_grid_5 product type-product post-8945 status-publish instock product_cat-new-cars has-post-thumbnail shipping-taxable product-type-simple"
-            >
-              <div class="product-inner animation fade">
-                <figure class="product_thumbnail">
-                  <a
-                    href="../ferrari-488-pista-2020/index.html"
-                    title="Ferrari 488 PISTA &#8211; 2020"
-                    ><img
-                      width="1080"
-                      height="1080"
-                      src="/wp-content/uploads/2022/11/TAMNEL-488-PISTA.jpg"
-                      class="main-image skip-lazy wp-post-image"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                  /></a>
-                  <div class="actions-wrapper">
-                    <div class="actions-inner"></div>
-                  </div>
-                </figure>
-                <div class="caption">
-                  <div class="product-title">
-                    <h2>
-                      <a
-                        class="product-link"
-                        href="../ferrari-488-pista-2020/index.html"
-                        title="Ferrari 488 PISTA &#8211; 2020"
-                        >Ferrari 488 PISTA &#8211; 2020</a
-                      >
-                    </h2>
-
-                    <div
-                      class="yith-wcwl-add-to-wishlist add-to-wishlist-8945 wishlist-fragment on-first-load"
-                      data-fragment-ref="8945"
-                      data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":8945,"parent_product_id":8945,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"shortcode","item":"add_to_wishlist"}'
-                    >
-                      <!-- ADD TO WISHLIST -->
-                      <div class="yith-wcwl-add-button et-tooltip">
-                        <a
-                          href="index7699.html?add_to_wishlist=8945"
-                          rel="nofollow"
-                          data-product-id="8945"
-                          data-product-type="simple"
-                          data-original-product-id="8945"
-                          class="add_to_wishlist single_add_to_wishlist"
-                          data-title="Add to wishlist"
-                          ><span class="text">Add to wishlist</span
-                          ><span class="icon"
-                            ><span class="et-icon et-heart"></span
-                          ></span>
-                        </a>
-                      </div>
-                      <!-- COUNT TEXT -->
-                    </div>
-                  </div>
-
-                  <div class="product_after_title">
-                    <div class="product_after_shop_loop_price"></div>
-
-                    <div class="product-excerpt">
-                      <p>
-                        *2020 FERRARI 488 PISTA* KM : 598 KM (Delivery
-                        Miles) *ROSSO SCUDERIA IN ALCANTARA NERO* *Price :
-                        IDR. 12.5M OFF* *Features :* 1. ADAPTIVE
-                        FRONTLIGHT SYSTEM 2. ALCANTARA INTERIOR CARPET :
-                        ALCANTARA NERO 3. YELLOW BRAKE CALLIPERS 4. CARBON
-                        FIBRE FRONT FLAPS 5. CARBON FIBRE SIDE AIR
-                        SPLITTER 6. ENGINE&hellip;
-                      </p>
-                    </div>
-
-                    <div class="after_shop_loop_actions">
-                      <a
-                        href="../ferrari-488-pista-2020/index.html"
-                        data-quantity="1"
-                        class="button product_type_simple"
-                        data-product_id="8945"
-                        data-product_sku=""
-                        aria-label="Read more about &ldquo;Ferrari 488 PISTA - 2020&rdquo;"
-                        rel="nofollow"
-                        ><span class="text">Read more</span
-                        ><span class="icon"
-                          ><span
-                            class="et-icon et-shopping-cart"
-                          ></span></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="item et-listing-style1 col-6 col-sm-6 col-md-4 col-lg-3 small_grid_5 product type-product post-7084 status-publish instock product_cat-new-cars has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner animation fade">
-                <figure class="product_thumbnail">
-                  <a
-                    href="../ferrari-488-pista-rosso-scuderia/index.html"
-                    title="Ferrari 488 Pista Rosso Scuderia"
-                    ><img
-                      width="2560"
-                      height="2560"
-                      src="/wp-content/uploads/2022/04/THUMBNAIL-WEBSITE-488-pista-rosso-scaled.jpg"
-                      class="main-image skip-lazy wp-post-image"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                  /></a>
-                  <div class="actions-wrapper">
-                    <div class="actions-inner"></div>
-                  </div>
-                </figure>
-                <div class="caption">
-                  <div class="product-title">
-                    <h2>
-                      <a
-                        class="product-link"
-                        href="../ferrari-488-pista-rosso-scuderia/index.html"
-                        title="Ferrari 488 Pista Rosso Scuderia"
-                        >Ferrari 488 Pista Rosso Scuderia</a
-                      >
-                    </h2>
-
-                    <div
-                      class="yith-wcwl-add-to-wishlist add-to-wishlist-7084 wishlist-fragment on-first-load"
-                      data-fragment-ref="7084"
-                      data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":7084,"parent_product_id":7084,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"shortcode","item":"add_to_wishlist"}'
-                    >
-                      <!-- ADD TO WISHLIST -->
-                      <div class="yith-wcwl-add-button et-tooltip">
-                        <a
-                          href="indexf035.html?add_to_wishlist=7084"
-                          rel="nofollow"
-                          data-product-id="7084"
-                          data-product-type="simple"
-                          data-original-product-id="7084"
-                          class="add_to_wishlist single_add_to_wishlist"
-                          data-title="Add to wishlist"
-                          ><span class="text">Add to wishlist</span
-                          ><span class="icon"
-                            ><span class="et-icon et-heart"></span
-                          ></span>
-                        </a>
-                      </div>
-                      <!-- COUNT TEXT -->
-                    </div>
-                  </div>
-
-                  <div class="product_after_title">
-                    <div class="product_after_shop_loop_price">
-                      <span class="price"
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span
-                              class="woocommerce-Price-currencySymbol"
-                              >Rp</span
-                            >14,800,000,000.00</bdi
-                          ></span
-                        ></span
-                      >
-                    </div>
-
-                    <div class="product-excerpt">
-                      <p>
-                        DR 14,800,000,000.00<br />
-                        Brand New 2020 Ferrari 488 Pista Rosso Scuderia
-                      </p>
-                      <p>PRICE : Rp 14,8 M off the road</p>
-                      <p>
-                        Exterior : Rosso Scuderia<br />
-                        Interior : Alcantara Nero 9440<br />
-                        Mats : Extra-Range
-                      </p>
-                      <p>
-                        Options :<br />
-                        Apple CarPlay<br />
-                        Adaptive Frontlight System<br />
-                        Central Part of Seats in Alcantara Rosso FX<br />
-                        Rosso Scuderia Brake Callipers<br />
-                        Carbon Fibre Front Flaps<br />
-                        Carbon Fibre Side Air Splitter<br />
-                        Engine Covers in Carbon Fibre<br />
-                        Rear Diffuser in Carbon Fibre<br />
-                        Front Air Vents in Carbon Fibre<br />
-                        Carbon Fibre Underdoor Cover<br />
-                        Carbon Fibre Floor Plates<br />
-                        Carbon Fibre Inner Sill Trim<br />
-                        Carbon Fibre Upper Centre Console Trim<br />
-                        Coloured Inner Details Rosso Ferrari 130421<br />
-                        Carbon Fibre Hub Caps<br />
-                        Suspension Lifter<br />
-                        Cavallino Stitched on Headrest Rosso 0504<br />
-                        Titanium Exhaust Pipes<br />
-                        Additional Coloured Mats with Logo<br />
-                        Carbon Fibre Rear Moulding<br />
-                        High Emotion Low Emission<br />
-                        &#8216;Scuderia Ferrari&#8217; Shields<br />
-                        Int/Ext Electrochromic Mirrors<br />
-                        Radionavi System + Bluetooth<br />
-                        Navtrak Anti-Theft System Sub<br />
-                        Racing Stripe Extra-Range<br />
-                        20&#8243; Dark Forged Wheels<br />
-                        Carbon Fibre Racing Seats Large Size Seats<br />
-                        Racing Seat Lifter<br />
-                        Integrated Audio System<br />
-                        Special Equipment<br />
-                        Coloured Special Stitching O.R. Rosso 0504
-                      </p>
-                      <p>
-                        Special Equipment :<br />
-                        Racing Livery in Metallic Oro Fym. 138364
-                      </p>
-                    </div>
-
-                    <div class="after_shop_loop_actions">
-                      <a
-                        href="indexb85d.html?add-to-cart=7084"
-                        data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                        data-product_id="7084"
-                        data-product_sku=""
-                        aria-label="Add &ldquo;Ferrari 488 Pista Rosso Scuderia&rdquo; to your cart"
-                        rel="nofollow"
-                        ><span class="text">Add to cart</span
-                        ><span class="icon"
-                          ><span
-                            class="et-icon et-shopping-cart"
-                          ></span></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="item et-listing-style1 col-6 col-sm-6 col-md-4 col-lg-3 small_grid_5 product type-product post-7067 status-publish last instock product_cat-new-cars has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner animation fade">
-                <figure class="product_thumbnail">
-                  <a
-                    href="../porsche-911-991-2-gt3-rs/index.html"
-                    title="Porsche 911 991.2 GT3 RS"
-                    ><img
-                      width="2560"
-                      height="2560"
-                      src="/wp-content/uploads/2022/04/THUMBNAIL-WEBSITE-GT3RS-WHITE-scaled.jpg"
-                      class="main-image skip-lazy wp-post-image"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                  /></a>
-                  <div class="actions-wrapper">
-                    <div class="actions-inner"></div>
-                  </div>
-                </figure>
-                <div class="caption">
-                  <div class="product-title">
-                    <h2>
-                      <a
-                        class="product-link"
-                        href="../porsche-911-991-2-gt3-rs/index.html"
-                        title="Porsche 911 991.2 GT3 RS"
-                        >Porsche 911 991.2 GT3 RS</a
-                      >
-                    </h2>
-
-                    <div
-                      class="yith-wcwl-add-to-wishlist add-to-wishlist-7067 wishlist-fragment on-first-load"
-                      data-fragment-ref="7067"
-                      data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":7067,"parent_product_id":7067,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"shortcode","item":"add_to_wishlist"}'
-                    >
-                      <!-- ADD TO WISHLIST -->
-                      <div class="yith-wcwl-add-button et-tooltip">
-                        <a
-                          href="index674a.html?add_to_wishlist=7067"
-                          rel="nofollow"
-                          data-product-id="7067"
-                          data-product-type="simple"
-                          data-original-product-id="7067"
-                          class="add_to_wishlist single_add_to_wishlist"
-                          data-title="Add to wishlist"
-                          ><span class="text">Add to wishlist</span
-                          ><span class="icon"
-                            ><span class="et-icon et-heart"></span
-                          ></span>
-                        </a>
-                      </div>
-                      <!-- COUNT TEXT -->
-                    </div>
-                  </div>
-
-                  <div class="product_after_title">
-                    <div class="product_after_shop_loop_price">
-                      <span class="price"
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span
-                              class="woocommerce-Price-currencySymbol"
-                              >Rp</span
-                            >11,500,000,000.00</bdi
-                          ></span
-                        ></span
-                      >
-                    </div>
-
-                    <div class="product-excerpt">
-                      <p>PRICE : Rp 11,5 M off the road</p>
-                      <p>
-                        KM 197 (on going)<br />
-                        White<br />
-                        Clubsport Package<br />
-                        Weissach Package<br />
-                        PCCB<br />
-                        Front Lift System<br />
-                        Cruise Control<br />
-                        Reverse Camera<br />
-                        BOSE<br />
-                        Chrono<br />
-                        White Dial<br />
-                        Dynamic Light System
-                      </p>
-                    </div>
-
-                    <div class="after_shop_loop_actions">
-                      <a
-                        href="index20e9.html?add-to-cart=7067"
-                        data-quantity="1"
-                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                        data-product_id="7067"
-                        data-product_sku=""
-                        aria-label="Add &ldquo;Porsche 911 991.2 GT3 RS&rdquo; to your cart"
-                        rel="nofollow"
-                        ><span class="text">Add to cart</span
-                        ><span class="icon"
-                          ><span
-                            class="et-icon et-shopping-cart"
-                          ></span></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section> --}}
 
     </div>
 
@@ -818,8 +337,13 @@
 @section('scripts')
 
 
+  <script src="{{ asset('/assets/js/jquery_number.min.js') }}"></script>
   <script type="text/javascript">
     
+    $(document).ready(function () {
+      $('.harga').number( true, 2 );
+    });
+
     (function () {
       var c = document.body.className;
       c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
@@ -844,13 +368,11 @@
   <script src='/wp-content/plugins/js_composer/assets/lib/flexslider2/jquery.flexslider-min.js?ver=2.7.2.0' id='flexslider-js'></script>
   <script src='/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min8505.js?ver=4.1.1-wc.6.2.2' id='photoswipe-js'></script>
   <script src='/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min8505.js?ver=4.1.1-wc.6.2.2' id='photoswipe-ui-default-js'></script>
-
   <script src='/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.minc6bb.js?ver=2.1.4-wc.6.2.2' id='js-cookie-js'></script>
   <script id='woocommerce-js-extra'>
     var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
   </script>
   <script src='/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min3781.js?ver=6.2.2' id='woocommerce-js'></script>
-
   <script src='/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min3781.js?ver=6.2.2' id='wc-cart-fragments-js'></script>
 
   <script src='/wp-includes/js/imagesloaded.mineda1.js?ver=4.1.4' id='imagesloaded-js'></script>
@@ -874,9 +396,10 @@
   <script id='goya-app-js-extra'>
     var goya_theme_vars = {"ajaxUrl":"https:\/\/prestigecars.co.id\/wp-admin\/admin-ajax.php","l10n":{"back":"Back","view_cart":"View cart"},"icons":{"prev_arrow":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-left\"><polyline points=\"15 18 9 12 15 6\"><\/polyline><\/svg>","next_arrow":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"><\/polyline><\/svg>"},"settings":{"current_url":"https:\/\/prestigecars.co.id\/product\/bentley-bentayga-hybird-first-edition-2022\/","site_url":"https:\/\/prestigecars.co.id","pageLoadTransition":false,"ajaxSearchActive":true,"ajaxAddToCartSingle":true,"cart_icon":"cart-page","minicart_auto":true,"shop_infinite_load":"button","shop_update_url":false,"ajaxWishlistCounter":false,"YITH_WCWL_Premium":false,"posts_per_page":"10","related_slider":true,"popup_length":1,"is_front_page":false,"is_blog":false,"is_cart":false,"is_checkout":false,"checkoutTermsPopup":true,"single_atc_nonce":"bd4cb7bc8b","facebook4WC":false}};
   </script>
-  <script src='/wp-content/themes/goya/assets/js/goya-app.min664d.js?ver=1.0.6.7' id='goya-app-js'></script>
+
   <script src='/wp-content/uploads/wpmss/wpmssab.minb7a8.js?ver=1649242387' id='wpmssab-js'></script>
   <script src='/wp-content/plugins/mousewheel-smooth-scroll/js/SmoothScroll.min5b3c.js?ver=1.4.10' id='SmoothScroll-js'></script>
+
   <script src='/wp-content/uploads/wpmss/wpmss.minb7a8.js?ver=1649242387' id='wpmss-js'></script>
   <script src='/wp-content/plugins/wp-whatsapp-chat/assets/frontend/js/frontend3a8d.js?ver=021fa4de1c6ea4db860e85f702082b24' id='qlwapp-js'></script>
   <script id='woo-variation-swatches-js-extra'>

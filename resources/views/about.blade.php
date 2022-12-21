@@ -108,9 +108,9 @@
                                 <div class="wpb_wrapper">
                                     <div id="et-image-338" class="et-image et_image_link">
                                     <div class="et-image-inner">
-                                        <div class="et-image-thumb">
-                                        <img width="1280" height="853" src="/img/showroom.jpg"
-                                            class="attachment-full et-lazyload lazyload" alt="" decoding="async" loading="lazy" title="showroom" data-src="/img/showroom.jpg" data-sizes="(max-width: 1280px) 100vw, 1280px"/>
+                                        <div class="et-image-thumb p-3">
+                                        <img width="1280" height="853" src="{{ asset('/assets/img/about.jpg') }}"
+                                            class="attachment-full et-lazyload lazyload img-thumbnail" alt="" decoding="async" loading="lazy" title="showroom" data-src="{{ asset('/assets/img/about.jpg') }}" data-sizes="(max-width: 1280px) 100vw, 1280px"/>
                                         </div>
                                     </div>
                                     </div>
@@ -122,13 +122,10 @@
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element">
                                     <div class="wpb_wrapper">
-                                        <h5 class="fancy-title">Our History</h5>
+                                        <h5 class="fancy-title">Alamat</h5>
                                         <h2><b>Lestari Mobilindo</b></h2>
                                         <p>
-                                        <span style="font-weight: 400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia in veritatis necessitatibus ad laboriosam molestias veniam suscipit tenetur officiis natus reprehenderit mollitia, ut a? Nobis neque rerum ipsam temporibus odio.</span>
-                                        </p>
-                                        <p>
-                                        <span style="font-weight: 400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere doloremque dicta illum. Ea voluptates, tempora molestiae dignissimos consequatur provident nulla veniam voluptate unde laborum repudiandae quibusdam necessitatibus eligendi doloremque deleniti.</span>
+                                        <span style="font-weight: 400">Jl. Jendral sudirman no 550 A-B Km 3,5 Samping taman makam pahlawan, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30126 . ( sebelah bank BRI pahlawan ) </span>
                                         </p>
                                     </div>
                                     </div>
@@ -169,7 +166,7 @@
                                 <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element">
-                                    <div class="wpb_wrapper">
+                                    <div class="wpb_wrapper p-3">
                                         <h5
                                         class="fancy-title"
                                         style="text-align: center"
@@ -194,7 +191,7 @@
                         <div class="vc_column-inner vc_custom_1650958439698">
                             <div class="wpb_wrapper">
                                 <div class="wpb_text_column wpb_content_element">
-                                    <div class="wpb_wrapper">
+                                    <div class="wpb_wrapper p-3">
                                         <p style="text-align: center">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum quasi magni placeat magnam minus nesciunt architecto voluptatum, natus assumenda velit ab, vel quos corrupti excepturi! Hic officiis asperiores voluptatum?
                                         </p>
@@ -222,7 +219,7 @@
                         class="wpb_column vc_column_container vc_col-sm-12 et-dark-column"
                     >
                         <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
+                        <div class="wpb_wrapper p-3">
                             <div
                             class="vc_row wpb_row vc_inner vc_row-fluid max_width align-center vc_custom_1578532916555"
                             >
