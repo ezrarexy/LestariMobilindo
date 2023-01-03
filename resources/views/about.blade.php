@@ -1,6 +1,6 @@
 @extends('tmp.main')
 
-@section('title', 'About')
+@section('title', 'Lestari Mobilindo - About')
 
 @section('stylesheet')
 
@@ -82,6 +82,12 @@
         #et-counter-63845c24a85ae i {
         font-size: 64px;
         }
+
+        #map {
+            height: 400px; /* The height is 400 pixels */
+            width: 100%; /* The width is the width of the web page */
+        }
+
     </style>
 
 
@@ -122,8 +128,14 @@
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element">
                                     <div class="wpb_wrapper">
+
+                                        <h2 style="color: #fe0002"><b>Lestari Mobilindo</b></h2>
+                                            <h5 class="fancy-title">Visi</h5>
+                                            <p><span>Menjadi Showroom Mobil Bekas terbesar dan terpercaya di Sumatera Selatan.</span></p>
+
+                                            <h5 class="fancy-title">Misi</h5>
+                                            <p><span>Selalu memprioritaskan kepuasan pelanggan.</span></p>
                                         <h5 class="fancy-title">Alamat</h5>
-                                        <h2><b>Lestari Mobilindo</b></h2>
                                         <p>
                                         <span style="font-weight: 400">Jl. Jendral sudirman no 550 A-B Km 3,5 Samping taman makam pahlawan, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30126 . ( sebelah bank BRI pahlawan ) </span>
                                         </p>
@@ -171,9 +183,9 @@
                                         class="fancy-title"
                                         style="text-align: center"
                                         >
-                                        Sejak 20xx
+                                        Temukan kami
                                         </h5>
-                                        <h2 style="text-align: center">Our Story</h2>
+                                        {{-- <h2 style="text-align: center">Our Story</h2> --}}
                                     </div>
                                     </div>
                                 </div>
@@ -185,6 +197,7 @@
                     </div>
                     </div>
                 </div>
+
                 <div class="sec_row container">
                     <div class="vc_row wpb_row vc_row-fluid">
                     <div class="wpb_column vc_column_container vc_col-sm-12 et-dark-column">
@@ -192,9 +205,10 @@
                             <div class="wpb_wrapper">
                                 <div class="wpb_text_column wpb_content_element">
                                     <div class="wpb_wrapper p-3">
-                                        <p style="text-align: center">
+                                        {{-- <p style="text-align: center">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum quasi magni placeat magnam minus nesciunt architecto voluptatum, natus assumenda velit ab, vel quos corrupti excepturi! Hic officiis asperiores voluptatum?
-                                        </p>
+                                        </p> --}}
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4738.36837880029!2d104.74238637042694!3d-2.965066926481165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75d1a45f9aed%3A0xafb559c45eae5768!2sLestari%20Mobilindo!5e0!3m2!1sid!2sid!4v1671863230307!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </div>
                                 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey" >
@@ -211,6 +225,7 @@
                     </div>
                 </div>
                 
+{{-- 
                 <div class="sec_row container-fluid">
                     <div
                     class="vc_row wpb_row vc_row-fluid vc_custom_1650871862004 vc_row-has-fill"
@@ -337,7 +352,7 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>

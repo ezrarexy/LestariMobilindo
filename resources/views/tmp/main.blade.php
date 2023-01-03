@@ -235,6 +235,37 @@
     <link rel='stylesheet' id='wc-blocks-style-css' href='/assets/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style5379.css?ver=6.7.3' media='all' />
     <link rel='stylesheet' id='jquery-selectBox-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/jquery.selectBox7359.css?ver=1.2.0' media='all' />
     <link rel='stylesheet' id='yith-wcwl-font-awesome-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/font-awesome1849.css?ver=4.7.0' media='all' />
+
+    {{-- Material Icon --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    <style>
+        .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+        } 
+    </style>
+
     <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css' href='/assets/plugins/woocommerce//assets/css/prettyPhoto005e.css?ver=3.1.6' media='all' />
     <link rel='stylesheet' id='yith-wcwl-main-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/styleaf6c.css?ver=3.6.0' media='all' />
     <style id='yith-wcwl-main-inline-css'>
@@ -686,7 +717,7 @@
         h4,
         h5,
         h6 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .et-banner .et-banner-content .et-banner-title.color-accent,
@@ -921,8 +952,11 @@
 
         @media only screen and (min-width:768px) {
 
+            .light-title:not(.header_on_scroll) .header .et-header-menu>li>a {
+                {{ Request::is('/') ? 'color: #ffffff;' : 'color: #fe0002;'}}
+            }
+
             .light-title:not(.header_on_scroll) .header .site-title,
-            .light-title:not(.header_on_scroll) .header .et-header-menu>li>a,
             .sticky-header-light.header_on_scroll .header .et-header-menu>li>a,
             .light-title:not(.header_on_scroll) span.minicart-counter.et-count-zero,
             .sticky-header-light.header_on_scroll .header .icon,
@@ -969,7 +1003,9 @@
 
         .site-footer,
         .site-footer.dark {
-            background-color: #000000;
+            /* background-color: #000000; */
+            background-color:red;
+            background-image: linear-gradient(to left, rgba(254, 0, 2, 0), rgba(254, 0, 2, 1));
         }
 
         .site-footer .footer-bar.custom-color-1,
@@ -1062,7 +1098,12 @@
         }
 
         .page-id-861 #wrapper div[role="main"] {
-            background-color: #000000
+            background-color: #ffffff;
+        }
+
+        .product-title h2 a {
+            color: red;
+            font-weight:bold;
         }
 
         .has-gutenberg-white-color {
@@ -1213,7 +1254,7 @@
     <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
     <style type="text/css">
         body.custom-background #wrapper {
-            background-color: #000000;
+            background-color: #ffffff;
         }
     </style>
 
@@ -1491,7 +1532,7 @@
         .col-xl-12,
         .col-xl,
         .col-xl-auto {
-            padding-bottom: 35px;
+            padding-bottom: 15px;
         }
 
         .products .actions-wrapper .icon,
@@ -1607,7 +1648,7 @@
 
         .site-footer,
         .site-footer.dark {
-            background-color: #000000;
+            background-color: #ffffff;
         }
 
         .site-footer .footer-bar.custom-color-1,
@@ -1653,7 +1694,7 @@
         .products .add_to_cart_button.button,
         .products .added_to_cart.button,
         .side-panel header h6 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .cart-collaterals .woocommerce-shipping-destination strong,
@@ -1770,7 +1811,7 @@
         h4,
         h5,
         h6 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .yith-wcan-loading:after,
@@ -1847,7 +1888,7 @@
         }
 
         .et-header-menu ul.sub-menu li a {
-            color: #000000;
+            color: #fe0002;
         }
 
         .et-header-menu .sub-menu .sub-menu,
@@ -1891,7 +1932,7 @@
 
         .products .product-title h3 a,
         .et-product-detail .summary h1 {
-            color: #ffffff;
+            color: #ff0000;
         }
 
         .products .product_after_title .price ins,
@@ -2017,6 +2058,7 @@
                 /* background-color: #db0b0b; */
                 background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
                 height: 125px;
+                color: red;
             }
 
             .header_on_scroll:not(.megamenu-active) .header .logolink img {
@@ -2048,38 +2090,6 @@
             .header-transparent-mobiles.sticky-header-light.header_on_scroll .header a.icon,
             .sticky-header-light .header .menu-toggle:hover {
                 color: #ffffff;
-            }
-        }
-
-        @media only screen and (min-width: 768px) {
-
-            .light-title:not(.header_on_scroll) .header .site-title,
-            .light-title:not(.header_on_scroll) .header .et-header-menu>li>a,
-            .sticky-header-light.header_on_scroll .header .et-header-menu>li>a,
-            .light-title:not(.header_on_scroll) span.minicart-counter.et-count-zero,
-            .sticky-header-light.header_on_scroll .header .et-header-text,
-            .sticky-header-light.header_on_scroll .header .et-header-text a,
-            .light-title:not(.header_on_scroll) .header .et-header-text,
-            .light-title:not(.header_on_scroll) .header .et-header-text a,
-            .sticky-header-light.header_on_scroll .header .header .icon,
-            .light-title:not(.header_on_scroll) .header .icon,
-            .sticky-header-light.header_on_scroll .header .menu-toggle,
-            .light-title:not(.header_on_scroll) .header .menu-toggle,
-            .sticky-header-light.header_on_scroll .header .et-switcher-container .selected,
-            .light-title:not(.header_on_scroll) .header .et-switcher-container .selected,
-            .light-title:not(.header_on_scroll) .header .product.wcml-dropdown li>a,
-            .light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency>a,
-            .light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency:hover>a,
-            .light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency:focus>a,
-            .sticky-header-light.header_on_scroll .header .product.wcml-dropdown li>a,
-            .sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency>a,
-            .sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency:hover>a,
-            .sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency:focus>a {
-                color: #ffffff;
-            }
-
-            .products:not(.shop_display_list) .et-listing-style4 .after_shop_loop_actions .button {
-                background-color: #000000;
             }
         }
 
@@ -2389,7 +2399,7 @@
                         <div class="header-left-items header-items">
 
                             <div class="logo-holder">
-                                <a href="index.html" rel="home" class="logolink ">
+                                <a href="/" rel="home" class="logolink ">
                                     <img src="/img/logo.png"
                                         class="skip-lazy logoimg bg--light" alt="Lestari Mobilindo" /><img
                                         src="/img/logo.png" class="skip-lazy logoimg bg--dark"
@@ -2444,9 +2454,9 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li id="menu-item-4459"
+                                    {{-- <li id="menu-item-4459"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('contact') ? 'current-menu-item current_page_item' : ''}} menu-item-4459">
-                                        <a href="/contact">HUBUNGI</a></li>
+                                        <a href="/contact">HUBUNGI</a></li> --}}
                                     <li id="menu-item-4458"
                                         class="menu-item menu-item-type-custom menu-item-object-custom {{ Request::is('about') ? 'current-menu-item current_page_item' : ''}} menu-item-4458">
                                         <a href="/about">TENTANG</a></li>
@@ -2473,7 +2483,7 @@
 
 
                         <div class="logo-holder">
-                            <a href="index.html" rel="home" class="logolink ">
+                            <a href="/" rel="home" class="logolink ">
                                 <img src="/img/logo.png"
                                     class="skip-lazy logoimg bg--light" alt="Lestari Mobilindo" /><img
                                     src="/img/logo.png" class="skip-lazy logoimg bg--dark"
@@ -2586,27 +2596,30 @@
 
             <div class="wp-bottom-menu-icon-wrapper">
 
-                <i class="wp-bottom-menu-item-icons fa fa-home"></i>
+                <span class="material-icons">&#xea44;</span>
+                {{-- <i class="wp-bottom-menu-item-icons fa fa-home"></i> --}}
             </div>
-            <span>Beranda</span>
+            <span>BERANDA</span>
 
         </a>
         <a href="/car" class="wp-bottom-menu-item {{ Request::is('car') ? 'active' : ''}}">
 
             <div class="wp-bottom-menu-icon-wrapper">
 
-                <i class="wp-bottom-menu-item-icons fa fa-car"></i>
+                <span class="material-icons">&#xe531;</span>
+                {{-- <i class="wp-bottom-menu-item-icons fa fa-car"></i> --}}
             </div>
-            <span>Mobil</span>
+            <span>MOBIL</span>
 
         </a>
-        <a href="/contact" class="wp-bottom-menu-item {{ Request::is('brand') ? 'active' : ''}}">
+        <a href="/about" class="wp-bottom-menu-item {{ Request::is('about') ? 'active' : ''}}">
 
             <div class="wp-bottom-menu-icon-wrapper">
 
-                <i class="fal fa-id-badge"></i>
+                <span class="material-icons">&#xe0cf;</span>
+                {{-- <i class="fal fa-id-badge"></i> --}}
             </div>
-            <span>HUBUNGI</span>
+            <span>TENTANG</span>
 
         </a>
 
@@ -2673,18 +2686,18 @@
                             <ul class="sub-menu">
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5286  mega-menu-title">
-                                    <a href="car">SEMUA</a><span class="et-menu-toggle"></span></li>
+                                    <a href="/car">SEMUA</a><span class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5514 ">
-                                    <a href="car/new">BARU</a><span
+                                    <a href="/car/new">BARU</a><span
                                         class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5515 ">
-                                    <a href="car/used">BEKAS</a><span
+                                    <a href="/car/used">BEKAS</a><span
                                         class="et-menu-toggle"></span></li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5672 ">
-                                    <a href="car/indent">PESAN</a><span
+                                    <a href="/car/indent">PESAN</a><span
                                         class="et-menu-toggle"></span></li>
                             </ul>
                         </li>
@@ -2709,8 +2722,8 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4459"><a
-                                href="/contact">HUBUNGI</a><span class="et-menu-toggle"></span></li>
+                        {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4459"><a
+                                href="/contact">HUBUNGI</a><span class="et-menu-toggle"></span></li> --}}
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4458"><a
                                 href="/about">TENTANG</a><span class="et-menu-toggle"></span></li>
                     </ul>
@@ -2740,7 +2753,7 @@
     
 
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400&amp;display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400&amp;display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
 
     <script type="text/javascript">
         (function() {
@@ -2813,7 +2826,7 @@
         var goya_theme_vars = {
             "ajaxUrl": "https:\/\/prestigecars.co.id\/wp-admin\/admin-ajax.php",
             "l10n": {
-                "back": "Back",
+                "back": "Kembali",
                 "view_cart": "View cart"
             },
             "icons": {
@@ -2846,6 +2859,10 @@
         };
     </script>
     <script src='/assets/themes/goya//assets/js/goya-app.min664d.js?ver=1.0.6.7' id='goya-app-js'></script>
+
+    {{-- Material Icon --}}
+
+
     <script src='/assets/uploads/wpmss/wpmssab.minb7a8.js?ver=1649242387' id='wpmssab-js'></script>
     <script src='/assets/plugins/mousewheel-smooth-scroll/js/SmoothScroll.min5b3c.js?ver=1.4.10' id='SmoothScroll-js'></script>
     <script src='/assets/uploads/wpmss/wpmss.minb7a8.js?ver=1649242387' id='wpmss-js'></script>

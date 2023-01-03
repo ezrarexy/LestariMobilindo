@@ -2,8 +2,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-icon">
                     <i class="fas fa-user-shield"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">LM Admin</div>
@@ -24,26 +24,26 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Cars
+                Produk
             </div>
 
             <li class="nav-item {{ $pej->link == 'cars' ? 'active' : '' }}">
                 <a class="nav-link" href="/cars">
                     <i class="fas fa-fw fa-car"></i>
-                    <span>All Cars</span></a>
+                    <span>Mobil</span></a>
             </li>
 
             <li class="nav-item {{ $pej->link == 'brands' ? 'active' : '' }}">
                 <a class="nav-link" href="/brands">
                     <i class="fas fa-copyright"></i>
-                    <span>Brands</span></a>
+                    <span>Merk</span></a>
             </li>
 
             <li class="nav-item {{ $pej->link == 'categories' ? 'active' : '' }}">
                 <a class="nav-link" href="/categories">
                     {{-- <i class="fas fa-fw fa-chart-area"></i> --}}
                     <i class="fas fa-th-large"></i>
-                    <span>Categories</span></a>
+                    <span>Kategori</span></a>
             </li>
 
 
@@ -56,10 +56,16 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+            <li class="nav-item {{ $pej->link == 'banners' ? 'active' : '' }}">
+                <a class="nav-link" href="/banners">
+                    <i class="fas fa-ad"></i>
+                    <span>Banner</span></a>
+            </li>
+
+            <li class="nav-item {{ $pej->link == 'sales' ? 'active' : '' }}">
+                <a class="nav-link" href="/sales">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Sales</span></a>
             </li>
 
             <!-- Divider -->

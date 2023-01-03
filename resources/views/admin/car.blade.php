@@ -9,13 +9,13 @@
     
 @switch($pej->link)
     @case('cars')
-        @include('admin/layout/cars');
+        @include('admin/layout/cars')
         @break
     @case('brands')
-        @include('admin/layout/brand');
+        @include('admin/layout/brand')
         @break
     @case('categories')
-        @include('admin/layout/category');
+        @include('admin/layout/category')
         @break
 @endswitch
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+use App\Models\sales;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\product;
@@ -17,7 +19,13 @@ class adminPageController extends Controller
         $pej = app()->make('stdClass');
 
         $pej->name = 'Dashboard';
-        $pej->link = '/';        
+        $pej->link = '/';
+
+        $pej->new = Product::where('condition_id','=','0')->count();
+        $pej->second = Product::where('condition_id','=','1')->count();
+        $pej->indent = Product::where('condition_id','=','2')->count();
+        $pej->brand = Brand::count();
+        $pej->category = Category::count();
 
         return view('admin/index')->with('pej',$pej);
     }
@@ -37,6 +45,7 @@ class adminPageController extends Controller
         if (!is_null($data)) {
             foreach ($data as $k => $v) {
                 $img = explode('|',$v->img);
+                array_pop($img);
                 $v->img = $img;
             }
         }
@@ -87,5 +96,26 @@ class adminPageController extends Controller
         return view('admin/car')->with('pej',$pej)->with('data',$data);
     }
 
+    public function Banner(){
+        $pej = app()->make('stdClass');
 
+        $data = Banner::all();
+
+        $pej->name = 'Banners';
+        $pej->link = 'banners';
+
+        return view('admin/banner')->with('pej',$pej)->with('data',$data);;
+    }
+
+    public function Sales(){
+        $pej = app()->make('stdClass');
+
+        $data = sales::all();
+
+        $pej->name = 'Sales';
+        $pej->link = 'sales';
+
+        return view('admin/sales')->with('pej',$pej)->with('data',$data);;
+    }
+    
 }

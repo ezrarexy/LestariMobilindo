@@ -1,6 +1,6 @@
 @extends('tmp.main')
 
-@section('title', 'Home - Lestari Mobilindo')
+@section('title', 'Lestari Mobilindo - Beranda')
 
 @section('stylesheet')
 
@@ -206,6 +206,10 @@
     <link rel='stylesheet' id='wc-blocks-style-css' href='/assets/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style5379.css?ver=6.7.3' media='all' />
     <link rel='stylesheet' id='jquery-selectBox-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/jquery.selectBox7359.css?ver=1.2.0' media='all' />
     <link rel='stylesheet' id='yith-wcwl-font-awesome-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/font-awesome1849.css?ver=4.7.0' media='all' />
+    
+    {{-- bootstrap icon --}}
+    <link rel='stylesheet' id='bootstrap-icon-css' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' media='all' />
+
     <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css' href='/assets/plugins/woocommerce//assets/css/prettyPhoto005e.css?ver=3.1.6' media='all' />
     <link rel='stylesheet' id='yith-wcwl-main-css' href='/assets/plugins/yith-woocommerce-wishlist//assets/css/styleaf6c.css?ver=3.6.0' media='all' />
     <style id='yith-wcwl-main-inline-css'>
@@ -671,7 +675,7 @@
         h4,
         h5,
         h6 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .et-banner .et-banner-content .et-banner-title.color-accent,
@@ -1759,7 +1763,7 @@
         h4,
         h5,
         h6 {
-            color: #ffffff;
+            color: #000000;
         }
 
         .yith-wcan-loading:after,
@@ -2425,7 +2429,7 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
-                                <h2 style="color: #ffffff;text-align: center" class="vc_custom_heading heading1 vc_custom_1648462442179">Our Brands</h2>
+                                <h2 style="color: #000000;text-align: center" class="vc_custom_heading heading1 vc_custom_1648462442179">BRANDS</h2>
                                 <div id="et-image-slider-345" class="et-image-slider slick slick-slider slick-dotted slick-dots-centered   " data-adaptive-height="false" variable-width="true" data-pagination="" data-navigation="true" data-center="true" data-fade="" data-columns="5" data-infinite="" data-autoplay="true" data-autoplay-speed="" data-pause="">
                                     @php
                                         $brand = \App\Models\Brand::all();
@@ -2458,10 +2462,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid vc_custom_1648440752285">
-                    <div class="wpb_column vc_column_container vc_col-sm-8 vc_hidden-lg et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-lg et-dark-column">
                         <div class="vc_column-inner  vc_custom_1650441016289">
                             <div class="wpb_wrapper">
-                                <h1 style="font-size: 20px;color: #ffffff;text-align: left" class="vc_custom_heading vc_custom_1652342431881"><b>NEW CARS</b></h1>
+                                <h1 style="font-size: 20px;color: #000000;text-align: center" class="vc_custom_heading vc_custom_1652342431881"><b>BARU</b></h1>
                             </div>
                         </div>
                     </div>
@@ -2470,10 +2474,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs et-dark-column">
                         <div class="vc_column-inner  vc_custom_1650440951105">
                             <div class="wpb_wrapper">
-                                <h5 style="color: #ffffff;text-align: left" class="vc_custom_heading"><b>NEW CARS</b></h5>
+                                <h5 style="color: #000000;text-align: center" class="vc_custom_heading"><b>BARU</b></h5>
                             </div>
                         </div>
                     </div>
@@ -2499,7 +2503,9 @@
                                         <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish first outofstock product_cat-new-cars has-post-thumbnail shipping-taxable purchasable product-type-simple">
                                             <div class="product-inner animation fade">
                                                 <figure class="product_thumbnail ">
-                                                    <a href="product/{{ $v->id }}" title="New Cars {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" data-src="/img/products/{{ $v->img[0] }}" data-sizes="auto" /></a>
+                                                    <a href="product/{{ $v->id }}" title="New Cars {{ $i }}">
+                                                        <img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" data-src="/img/products/{{ $v->img[0] }}"/>
+                                                    </a>
                                                     <div class="actions-wrapper">
                                                         <div class="actions-inner">
                                                         </div>
@@ -2533,10 +2539,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid vc_custom_1653901949015">
-                    <div class="wpb_column vc_column_container vc_col-sm-8 vc_hidden-lg et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-lg et-dark-column">
                         <div class="vc_column-inner  vc_custom_1650444293521">
                             <div class="wpb_wrapper">
-                                <h1 style="font-size: 20px;color: #ffffff;text-align: left" class="vc_custom_heading vc_custom_1652342452269"><b>USED CARS</b></h1>
+                                <h1 style="font-size: 20px;color: #000000;text-align: center" class="vc_custom_heading vc_custom_1652342452269"><b>BEKAS</b></h1>
                             </div>
                         </div>
                     </div>
@@ -2545,10 +2551,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs et-dark-column">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
-                                <h5 style="color: #ffffff;text-align: left" class="vc_custom_heading"><b>USED CARS</b></h5>
+                                <h5 style="color: #000000;text-align: center" class="vc_custom_heading"><b>BEKAS</b></h5>
                             </div>
                         </div>
                     </div>
@@ -2571,24 +2577,45 @@
                                 <div class="carousel-container">
                                     <ul class="et-product et-main-products products row et-product-style1 hover-animation-zoom-jump products-by-category et-no-variations carousel et-product-slider slick slick-arrows-outside slick-controls-gray slick-dots-centered slick-dots-active-small" data-columns="5" data-mobile-columns="2" data-slides-to-scroll="5" data-navigation="true" data-pagination="" data-autoplay="true" data-autoplay-speed="4000">
 
-                                        @for($i=0; $i<10; $i++)
-                                        <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish first instock product_cat-used-cars has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                            <div class="product-inner animation fade">
-                                                <figure class="product_thumbnail ">
-                                                    <a href="product/{{ $i }}" title="Used Car {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/used.jpg" data-sizes="auto" /></a>
-                                                    <div class="actions-wrapper">
-                                                        <div class="actions-inner">
+                                        @if(count($data->car->used) > 0)
+                                            @foreach($data->car->used as $i => $v)
+                                                <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish first instock product_cat-used-cars has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                    <div class="product-inner animation fade">
+                                                        <figure class="product_thumbnail ">
+                                                            <a href="/product/{{ $v->id }}" title="Used Car {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/{{ $v->img[0] }}" data-sizes="auto" /></a>
+                                                            <div class="actions-wrapper">
+                                                                <div class="actions-inner">
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="product-title">
+                                                                <h2><a class="product-link" href="/product/{{ $v->id }}" title="Used Car {{ $v->name }}">{{ $v->name }}</a></h2>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </figure>
-                                                <div class="caption">
-                                                    <div class="product-title">
-                                                        <h2><a class="product-link" href="#" title="Used Car {{ $i }}">Used Car {{ $i }}</a></h2>
+                                                </li>
+                                            @endforeach
+                                        @else
+                                            @for($i=0; $i<10; $i++)
+                                                <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish first instock product_cat-used-cars has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                    <div class="product-inner animation fade">
+                                                        <figure class="product_thumbnail ">
+                                                            <a href="#" title="Used Car {{ $i }}"><img width="1080" height="1080" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/used.jpg" data-sizes="auto" /></a>
+                                                            <div class="actions-wrapper">
+                                                                <div class="actions-inner">
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="product-title">
+                                                                <h2><a class="product-link" href="#" title="Used Car {{ $i }}">Used Car {{ $i }}</a></h2>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        @endfor
+                                                </li>
+                                            @endfor
+                                        @endif
                                         
                                     </ul>
                                 </div>
@@ -2600,10 +2627,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-8 vc_hidden-lg et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-lg et-dark-column">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
-                                <h1 style="font-size: 20px;color: #ffffff;text-align: left" class="vc_custom_heading"><b>INDENT CARS</b></h1>
+                                <h1 style="font-size: 20px;color: #050000;text-align: center" class="vc_custom_heading"><b>INDENT</b></h1>
                             </div>
                         </div>
                     </div>
@@ -2612,10 +2639,10 @@
 
             <div class="sec_row container">
                 <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs et-dark-column">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs et-dark-column">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
-                                <h5 style="color: #ffffff;text-align: left" class="vc_custom_heading"><b>INDENT CARS</b></h5>
+                                <h5 style="color: #000000;text-align: center" class="vc_custom_heading"><b>INDENT</b></h5>
                             </div>
                         </div>
                     </div>
@@ -2638,24 +2665,45 @@
                                 <div class="carousel-container">
                                     <ul class="et-product et-main-products products row et-product-style1 hover-animation-zoom-jump products-by-category et-no-variations carousel et-product-slider slick slick-arrows-outside slick-controls-gray slick-dots-centered slick-dots-active-small" data-columns="5" data-mobile-columns="2" data-slides-to-scroll="5" data-navigation="true" data-pagination="" data-autoplay="true" data-autoplay-speed="4000">
 
-                                        @for($i=0; $i<10; $i++)
-                                        <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish last instock product_cat-indent-cars has-post-thumbnail shipping-taxable product-type-simple">
-                                            <div class="product-inner animation fade">
-                                                <figure class="product_thumbnail ">
-                                                    <a href="product/{{ $i }}" title="Indent Car {{ $i }}"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/indent.jpg" data-sizes="auto" /></a>
-                                                    <div class="actions-wrapper">
-                                                        <div class="actions-inner">
+                                        @if(count($data->car->indent) > 0)
+                                            @foreach($data->car->indent as $i => $v)
+                                                <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish last instock product_cat-indent-cars has-post-thumbnail shipping-taxable product-type-simple">
+                                                    <div class="product-inner animation fade">
+                                                        <figure class="product_thumbnail ">
+                                                            <a href="/product/{{ $v->id }}" title="Indent Car {{ $i }}"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/{{ $v->img[0] }}" data-sizes="auto" /></a>
+                                                            <div class="actions-wrapper">
+                                                                <div class="actions-inner">
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="product-title">
+                                                                <h2><a class="product-link" href="/product/{{ $v->id }}" title="Indent Car {{ $v->name }}">{{ $v->name }}</a></h2>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </figure>
-                                                <div class="caption">
-                                                    <div class="product-title">
-                                                        <h2><a class="product-link" href="#" title="Indent Car {{ $i }}">Indent Car {{ $i }}</a></h2>
+                                                </li>
+                                            @endforeach
+                                        @else                                        
+                                            @for($i=0; $i<10; $i++)
+                                                <li class="item et-listing-style1 col-6 col-sm-6 col-md-4 large_grid_5 small_grid_6 product type-product post-{{ $i }} status-publish last instock product_cat-indent-cars has-post-thumbnail shipping-taxable product-type-simple">
+                                                    <div class="product-inner animation fade">
+                                                        <figure class="product_thumbnail ">
+                                                            <a href="#" title="Indent Car {{ $i }}"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="main-image et-lazyload lazyload wp-post-image" alt="" decoding="async" loading="lazy" data-src="/img/products/indent.jpg" data-sizes="auto" /></a>
+                                                            <div class="actions-wrapper">
+                                                                <div class="actions-inner">
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <div class="caption">
+                                                            <div class="product-title">
+                                                                <h2><a class="product-link" href="#" title="Indent Car {{ $i }}">Indent Car {{ $i }}</a></h2>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        @endfor
+                                                </li>
+                                            @endfor
+                                        @endif
                                     </ul>
                                 </div>
                                 <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
@@ -2779,6 +2827,8 @@
     <script src='/assets/plugins/brands-for-woocommerce/js/front6a4d.js?ver=6.1.1' id='berocket_front-js'></script>
     <script src='/assets/plugins/yith-woocommerce-wishlist//assets/js/jquery.selectBox.min7359.js?ver=1.2.0' id='jquery-selectBox-js'></script>
     <script src='/assets/plugins/woocommerce//assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js?ver=3.1.6' id='prettyPhoto-js'></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' id='jquery-yith-wcwl-js'></script>
 
     <script src='/assets/plugins/yith-woocommerce-wishlist//assets/js/jquery.yith-wcwl.minaf6c.js?ver=3.6.0' id='jquery-yith-wcwl-js'></script>
     <script src='/assets/plugins/revslider/public//assets/js/rbtools.min097f.js?ver=6.5.14' defer async id='tp-tools-js'></script>

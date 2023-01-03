@@ -160,6 +160,8 @@ h1 {
 </div>
 <div class="caps"></div>
 <canvas id="canvas"></canvas>
+<h3 style="z-index:3; position:relative"><a href="/">Kembali keberanda</a></h3>
+
 
 <script type="text/javascript">
 

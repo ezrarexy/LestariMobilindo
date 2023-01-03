@@ -5174,31 +5174,7 @@
 			display: block;
 		}
 
-		/* Menus */
-		.light-title:not(.header_on_scroll) .header .site-title,
-		.light-title:not(.header_on_scroll) .header .et-header-menu > li> a,
-		.sticky-header-light.header_on_scroll .header .et-header-menu > li> a,
-		.light-title:not(.header_on_scroll) span.minicart-counter.et-count-zero,
-		.sticky-header-light.header_on_scroll .header .et-header-text,
-		.sticky-header-light.header_on_scroll .header .et-header-text a,
-		.light-title:not(.header_on_scroll) .header .et-header-text,
-		.light-title:not(.header_on_scroll) .header .et-header-text a,
-		.sticky-header-light.header_on_scroll .header .header .icon,
-		.light-title:not(.header_on_scroll) .header .icon,
-		.sticky-header-light.header_on_scroll .header .menu-toggle,
-		.light-title:not(.header_on_scroll) .header .menu-toggle,
-		.sticky-header-light.header_on_scroll .header .et-switcher-container .selected,
-		.light-title:not(.header_on_scroll) .header .et-switcher-container .selected,
-		.light-title:not(.header_on_scroll) .header .product.wcml-dropdown li>a,
-		.light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency>a,
-		.light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency:hover>a,
-		.light-title:not(.header_on_scroll) .header .product.wcml-dropdown .wcml-cs-active-currency:focus>a,
-		.sticky-header-light.header_on_scroll .header .product.wcml-dropdown li>a,
-		.sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency>a,
-		.sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency:hover>a,
-		.sticky-header-light.header_on_scroll .header .product.wcml-dropdown .wcml-cs-active-currency:focus>a {
-			color: #fff;
-		}
+
 		.light-title:not(.header_on_scroll) .header .et-wishlist-counter.active {
 			background-color: rgba(255,255,255,0.1);
 		}
@@ -5644,12 +5620,12 @@
 
 	/* Footer Widgets */
 	.footer-widgets {
-		padding: 50px 0;
+		/* padding: 50px 0; */
 		border-top: 1px solid rgba(0,0,0,0.1);
 	}
 	.footer-widgets .widgettitle {
 		margin-bottom: 10px;
-		padding: 10px 0;
+		/* padding: 10px 0; */
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		font-weight: inherit;
@@ -9406,11 +9382,11 @@
 	
 	/* Footer Middle */
 	.footer-middle {
-		padding: 50px 0;
+		/* padding: 50px 0; */
 		border: 0;
 	}
 	.footer-widgets + .footer-middle {
-		padding-top: 25px;
+		/* padding-top: 25px; */
 	}
 	.footer-middle .mc4wp-form-fields {
 		margin: 20px 0;

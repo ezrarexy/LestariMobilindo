@@ -118,16 +118,51 @@ class pageController extends Controller
         return view('cars')->with('pej',$pej)->with('cars',$res);
     }
 
-    public function Brand() {
+    public function Brand($id) {
 
+        $sub = explode('/',$id);
         
-        return view('cars');
+        $pej = app()->make('stdClass');
+
+        $con = Brand::find($id)->name;
+
+        $pej->name = $con;
+        $pej->link = $id;
+
+        $res = Product::where('brand_id', $id)->get();
+
+        if (!is_null($res)) {
+            foreach ($res as $k => $v) {
+                $img = explode('|',$v->img);
+                $v->img = $img;
+            }
+        }
+
+        return view('cars')->with('pej',$pej)->with('cars',$res);  
     }
 
-    public function Tag() {
+    public function Tag($slug) {
 
+        $sub = explode('/',$slug);
         
-        return view('cars');
+        $pej = app()->make('stdClass');
+
+        $pej->name = ucfirst($slug).' Cars';
+        $pej->link = $slug;
+
+        $con = Category::where('name', $slug)->first()->id;
+
+        $res = Product::where('category_id', $con)->get();
+
+        if (!is_null($res)) {
+            foreach ($res as $k => $v) {
+                $img = explode('|',$v->img);
+                $v->img = $img;
+            }
+        }
+
+        return view('cars')->with('pej',$pej)->with('cars',$res);        
+
     }
 
     public function Contact() {

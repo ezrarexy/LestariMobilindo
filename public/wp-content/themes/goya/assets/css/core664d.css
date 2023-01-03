@@ -5644,7 +5644,7 @@
 
 	/* Footer Widgets */
 	.footer-widgets {
-		padding: 50px 0;
+		/* padding: 50px 0; */
 		border-top: 1px solid rgba(0,0,0,0.1);
 	}
 	.footer-widgets .widgettitle {
@@ -9410,7 +9410,7 @@
 		border: 0;
 	}
 	.footer-widgets + .footer-middle {
-		padding-top: 25px;
+		/* padding-top: 25px; */
 	}
 	.footer-middle .mc4wp-form-fields {
 		margin: 20px 0;

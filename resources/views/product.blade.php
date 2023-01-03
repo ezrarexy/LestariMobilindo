@@ -262,20 +262,39 @@
                   <div class="clearfix sticky-bar-trigger"></div>
                   <div class="product_meta">
                     <span class="posted_in">
-                      Tag: <a href="/category" rel="tag" style="text-transform: uppercase">{{ $product->brand }}</a>, <a href="/tag/{{ $product->category }}" rel="tag" style="text-transform: uppercase">{{ $product->category }}</a>, <a href="/car/{{ $product->condition }}" rel="tag" style="text-transform: uppercase">{{ $product->condition }}</a>
+                      Tag: <a href="/brand/{{ $product->brand_id }}" rel="tag" style="text-transform: uppercase">{{ $product->brand }}</a>, <a href="/tag/{{ $product->category }}" rel="tag" style="text-transform: uppercase">{{ $product->category }}</a>, <a href="/car/{{ $product->link }}" rel="tag" style="text-transform: uppercase">{{ $product->condition }}</a>
                     </span>
                   </div>
 
                   <div class="post-share">
                     <ul class="social-icons share-article">
-                      <li class="share-label">Hubungi</li>
+                      <li class="share-label">Edo</li>
                       
                       <li>
-                        <a aria-label="WhatsApp" href="https://wa.me/6282278442800?text=Hallo%20saya%20tertarik%20dengan%20produk%20anda%20{{ Request::url() }}"> <img alt="Chat on WhatsApp" src="/img/WhatsAppButtonGreenSmall.svg" /></a>
+                        <a aria-label="WhatsApp" href="https://wa.me/6281373986868?text=Hallo%20saya%20tertarik%20dengan%20produk%20anda%20{{ Request::url() }}"> <img alt="Chat on WhatsApp" src="/img/WhatsAppButtonGreenSmall.svg" /></a>
                       </li>
-
                     </ul>
                   </div>
+
+                  @php
+                  use \App\Models\sales;
+
+                  $sales = Sales::all();
+                  @endphp
+
+                  @foreach ($sales as $k=>$v)
+                  <div class="post-share">
+                    <ul class="social-icons share-article">
+                      <li class="share-label">{{$v->name}}</li>
+                      
+                      <li>
+                        <a aria-label="WhatsApp" href="https://wa.me/{{ $v->phone }}?text=Hallo%20saya%20tertarik%20dengan%20produk%20anda%20{{ Request::url() }}"> <img alt="Chat on WhatsApp" src="/img/WhatsAppButtonGreenSmall.svg" /></a>
+                      </li>
+                    </ul>
+                  </div>
+                  @endforeach
+
+
                 </div>
 
               </div>
